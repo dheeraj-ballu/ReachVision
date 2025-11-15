@@ -4,27 +4,11 @@ const navLinks = document.querySelector('.nav-links');
 menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
 
 // ===== Contact Form =====
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const response = await fetch("https://formspree.io/f/mrbrlkew", {
-      method: "POST",
-      body: new FormData(form),
-      headers: { "Accept": "application/json" }
-    });
-
-    if (response.ok) {
-      alert("Thank you for contacting Reach Vision X! We’ll get back to you soon.");
-      form.reset();
-    } else {
-      alert("Oops! Something went wrong. Please try again later.");
-    }
-  });
+document.getElementById('contact-form').addEventListener('submit', e => {
+  e.preventDefault();
+  alert('Thank you for contacting Reach Vision X! We’ll get back to you soon.');
+  e.target.reset();
 });
-
 
 // ===== Scroll Animation =====
 const faders = document.querySelectorAll('.fade-in');
@@ -86,5 +70,6 @@ window.addEventListener("load", () => {
     preloader.classList.add("hidden");
   }, 1000); // preloader duration (in ms)
 });
+
 
 
