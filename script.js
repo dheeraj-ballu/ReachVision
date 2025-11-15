@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const response = await fetch("https://formspree.io/f/YOUR_ENDPOINT", {
+    const response = await fetch("https://formspree.io/f/mrbrlkew", {
       method: "POST",
       body: new FormData(form),
       headers: { "Accept": "application/json" }
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
 
 // ===== Scroll Animation =====
@@ -86,6 +87,7 @@ window.addEventListener("load", () => {
     preloader.classList.add("hidden");
   }, 1000); // preloader duration (in ms)
 });
+
 
 
 
