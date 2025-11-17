@@ -293,7 +293,7 @@ body.dark .theme-btn:hover {
 /* Parallax effect for smaller screens (fallback) */
 @media (max-width: 768px) {
   .hero {
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
 }
 /* === Smooth Scrolling === */
@@ -345,5 +345,6 @@ html {
     transform: rotate(360deg);
   }
 }
+
 
 
